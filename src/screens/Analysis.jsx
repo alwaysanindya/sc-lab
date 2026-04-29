@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { getDeviceById } from '../data/devices'
-import { generateAIAnalysis } from '../data/results'
+import { generateAnalysis } from '../data/results'
 import { formatDate } from '../utils/helpers'
 
 // Brain Icon
@@ -25,7 +25,7 @@ export default function Analysis() {
     if (storedResults) setResults(JSON.parse(storedResults))
 
     const timer = setTimeout(() => {
-      const analysisData = generateAIAnalysis(deviceId)
+      const analysisData = generateAnalysis(deviceId)
       setAnalysis(analysisData)
       localStorage.setItem('sclab_last_analysis', JSON.stringify(analysisData))
       setIsLoading(false)

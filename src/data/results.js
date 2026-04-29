@@ -129,7 +129,7 @@ export const generateOptiHBResults = () => {
 /**
  * Generate analysis results – always LOW risk for demo
  */
-export const generateAIAnalysis = (device) => {
+export const generateAnalysis = (device) => {
   const analyses = {
     oroscan: {
       overallRisk: 'Low',

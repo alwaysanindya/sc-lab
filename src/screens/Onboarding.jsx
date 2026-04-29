@@ -59,7 +59,7 @@ const HowItWorksSlide = () => {
     },
     {
       label: 'Analyze',
-      desc: 'Get AI-powered results',
+      desc: 'Get automated results',
       color: '#059669',
       bg: '#ecfdf5',
       icon: (
@@ -221,7 +221,7 @@ const slides = [
   {
     component: HowItWorksSlide,
     title: 'How it works',
-    description: 'Three simple steps from device connection to AI-powered screening results.'
+    description: 'Three simple steps from device connection to automated screening results.'
   },
   {
     component: DevicesSlide,
@@ -259,11 +259,6 @@ export default function Onboarding() {
 
   return (
     <div className="onboarding">
-      {/* Skip button */}
-      {currentStep < slides.length - 1 && (
-        <button className="skip-btn" onClick={handleSkip}>Skip</button>
-      )}
-
       {/* Slide content */}
       <div className="onboarding-slide-container">
         <div className="onboarding-slide active" key={currentStep}>
@@ -292,14 +287,23 @@ export default function Onboarding() {
       </div>
 
       {/* Action buttons */}
-      <div className="onboarding-actions">
+      <div className="onboarding-actions" style={{display:'flex', justifyContent:'space-between', alignItems:'center'}}>
         {currentStep === slides.length - 1 ? (
-          <button className="btn btn-primary btn-full" onClick={handleNext}>
+          <button className="btn btn-primary btn-full" onClick={handleNext} style={{width:'100%'}}>
             Get Started
           </button>
         ) : (
           <>
-            <div></div>
+            <button
+              onClick={handleSkip}
+              style={{
+                background: 'none', border: 'none', color: '#94a3b8',
+                fontSize: '0.9rem', fontWeight: 500, cursor: 'pointer',
+                padding: '10px 16px'
+              }}
+            >
+              Skip
+            </button>
             <button className="btn btn-primary" onClick={handleNext}>
               Next
             </button>
