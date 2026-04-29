@@ -1,7 +1,7 @@
 import { randomInRange, roundTo } from '../utils/helpers'
 
 /**
- * Generate OroScan results — always in SAFE range for demo
+ * Generate OroScan results – always in SAFE range for demo
  */
 export const generateOroScanResults = () => {
   return {
@@ -22,7 +22,7 @@ export const generateOroScanResults = () => {
     plaqueIndex: roundTo(randomInRange(8, 22), 1),
     plaqueStatus: 'Minimal',
     recommendations: [
-      'Oral cavity appears healthy — no abnormalities detected',
+      'Oral cavity appears healthy – no abnormalities detected',
       'Continue regular dental check-ups every 6 months',
       'Maintain oral hygiene with brushing and flossing',
       'No immediate intervention required'
@@ -31,7 +31,7 @@ export const generateOroScanResults = () => {
 }
 
 /**
- * Generate HemoCube results — always in NORMAL range for demo
+ * Generate HemoCube results – always in NORMAL range for demo
  * Normal Hb: Male 13.5-17.5, Female 12.0-15.5, safe middle range used
  */
 export const generateHemoCubeResults = () => {
@@ -59,7 +59,7 @@ export const generateHemoCubeResults = () => {
 }
 
 /**
- * Generate OptiHB results — always in NORMAL/SAFE range for demo
+ * Generate OptiHB results – always in NORMAL/SAFE range for demo
  */
 export const generateOptiHBResults = () => {
   const hemoglobin = roundTo(randomInRange(13.0, 15.5), 1)
@@ -119,7 +119,7 @@ export const generateOptiHBResults = () => {
       'All parameters within normal physiological range',
       'Hemoglobin level indicates no anemia',
       'Blood glucose within healthy fasting range',
-      'Bilirubin level normal — liver function appears healthy',
+      'Bilirubin level normal – liver function appears healthy',
       'Oxygen saturation is optimal',
       'Follow-up screening recommended in 3-6 months'
     ]
@@ -127,7 +127,7 @@ export const generateOptiHBResults = () => {
 }
 
 /**
- * Generate analysis results — always LOW risk for demo
+ * Generate analysis results – always LOW risk for demo
  */
 export const generateAIAnalysis = (device) => {
   const analyses = {

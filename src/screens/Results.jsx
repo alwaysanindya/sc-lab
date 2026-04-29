@@ -72,7 +72,7 @@ export default function Results() {
     )
   }
 
-  // ===== HEMOCUBE: Error — blank strip, no blood sample =====
+  // ===== HEMOCUBE: Error – blank strip, no blood sample =====
   if (deviceId === 'hemocube') {
     return (
       <div className="app-container">
@@ -149,7 +149,7 @@ export default function Results() {
       <div className="app-container">
         <header style={{ padding: '20px', borderBottom: '1px solid var(--border-color)' }}>
           <button className="btn-back" onClick={() => navigate('/dashboard')} style={{ marginBottom: '12px' }}>←</button>
-          <h1 style={{ margin: '0 0 4px', fontSize: '1.5rem' }}>Device Data — {device?.name}</h1>
+          <h1 style={{ margin: '0 0 4px', fontSize: '1.5rem' }}>Device Data – {device?.name}</h1>
           <p style={{ margin: 0, fontSize: '0.8rem', color: 'var(--text-secondary)' }}>
             Fetched at {formatDate(new Date(results.timestamp))}
           </p>
@@ -186,7 +186,7 @@ export default function Results() {
             background: '#f0fdfa', borderRadius: 10, padding: '14px',
             borderLeft: '4px solid #0d7377', fontSize: '0.85rem', color: '#0d7377'
           }}>
-            4 images fetched successfully — 2 optical camera, 2 thermal camera. Click "View Analysis" for detailed screening results.
+            4 images fetched successfully – 2 optical camera, 2 thermal camera. Click "View Analysis" for detailed screening results.
           </div>
         </div>
 
@@ -211,7 +211,7 @@ export default function Results() {
     <div className="app-container">
       <header style={{ padding: '20px', borderBottom: '1px solid var(--border-color)' }}>
         <button className="btn-back" onClick={() => navigate('/dashboard')} style={{ marginBottom: '12px' }}>←</button>
-        <h1 style={{ margin: '0 0 4px', fontSize: '1.5rem' }}>Device Data — {device?.name}</h1>
+        <h1 style={{ margin: '0 0 4px', fontSize: '1.5rem' }}>Device Data – {device?.name}</h1>
         <p style={{ margin: 0, fontSize: '0.8rem', color: 'var(--text-secondary)' }}>
           Spectral readings at {formatDate(new Date(results.timestamp))}
         </p>

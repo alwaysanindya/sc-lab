@@ -1,7 +1,7 @@
 {
   "name": "SC Lab - Point-of-Care Screening",
   "short_name": "SC Lab",
-  "description": "Point-of-care screening platform by CRTDH, IIT Kharagpur",
+  "description": "Point-of-care data collection platform by Common Research & Development Hub, IIT Kharagpur",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

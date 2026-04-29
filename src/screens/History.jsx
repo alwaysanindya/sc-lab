@@ -72,14 +72,14 @@ export default function History() {
               let summaryValue = ''
               if (entry.deviceId === 'oroscan') {
                 summaryLabel = 'Health Score'
-                summaryValue = results.healthScore ? `${results.healthScore}` : '—'
+                summaryValue = results.healthScore ? `${results.healthScore}` : '–'
               } else if (entry.deviceId === 'hemocube') {
                 summaryLabel = 'Hemoglobin'
-                summaryValue = results.hemoglobin ? `${results.hemoglobin} g/dL` : '—'
+                summaryValue = results.hemoglobin ? `${results.hemoglobin} g/dL` : '–'
               } else if (entry.deviceId === 'optihb') {
                 const hb = results.parameters?.find(p => p.name === 'Hemoglobin')
                 summaryLabel = 'Hemoglobin'
-                summaryValue = hb ? `${hb.value} g/dL` : '—'
+                summaryValue = hb ? `${hb.value} g/dL` : '–'
               }
 
               return (
@@ -98,7 +98,7 @@ export default function History() {
                       {results.device || entry.deviceId}
                     </span>
                     <span style={{ fontSize: '0.75rem', color: '#94a3b8' }}>
-                      {entry.date ? formatDate(new Date(entry.date)) : '—'}
+                      {entry.date ? formatDate(new Date(entry.date)) : '–'}
                     </span>
                   </div>
 

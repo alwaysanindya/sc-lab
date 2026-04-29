@@ -190,17 +190,14 @@ export default function Settings() {
             padding: '16px',
             display: 'flex', alignItems: 'center', gap: 14
           }}>
-            <div style={{
-              width: 44, height: 44, borderRadius: 12,
-              background: 'linear-gradient(135deg, #0d7377, #0a5a63)',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              flexShrink: 0
-            }}>
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                <circle cx="12" cy="7" r="4"/>
-              </svg>
-            </div>
+            <img
+              src="./images/logos/suman_chakraborty.jpeg"
+              alt="Prof. Suman Chakraborty"
+              style={{
+                width: 44, height: 44, borderRadius: 12,
+                objectFit: 'cover', flexShrink: 0
+              }}
+            />
             <div style={{ flex: 1 }}>
               <div style={{ fontSize: '0.7rem', color: '#94a3b8', fontWeight: 500, letterSpacing: '0.3px', textTransform: 'uppercase' }}>
                 Principal Investigator
@@ -234,7 +231,7 @@ export default function Settings() {
                 CRTDH
               </div>
               <div style={{ fontSize: '0.78rem', color: '#64748b', marginTop: 1 }}>
-                Centre for Rural Technology & Digital Health
+                Common Research & Development Hub
               </div>
               <div style={{ fontSize: '0.75rem', color: '#94a3b8', marginTop: 1 }}>
                 IIT Kharagpur, West Bengal, India
@@ -267,13 +264,18 @@ export default function Settings() {
 
           <div style={{ borderTop: '1px solid #f1f5f9' }}/>
 
-          {/* Version info */}
-          <div style={{
-            padding: '14px 16px',
-            display: 'flex', justifyContent: 'space-between', alignItems: 'center'
-          }}>
-            <span style={{ fontSize: '0.82rem', color: '#64748b' }}>Version</span>
-            <span style={{ fontSize: '0.82rem', fontWeight: 600, color: '#1e293b' }}>1.1.0</span>
+          {/* Version + Developer */}
+          <div style={{ padding: '14px 16px' }}>
+            <div style={{
+              display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+              marginBottom: 8
+            }}>
+              <span style={{ fontSize: '0.82rem', color: '#64748b' }}>Version</span>
+              <span style={{ fontSize: '0.82rem', fontWeight: 600, color: '#1e293b' }}>1.2.0</span>
+            </div>
+            <div style={{ fontSize: '0.72rem', color: '#cbd5e1', lineHeight: 1.5 }}>
+              Developed by Anindya Roy, Principal Project Associate, IIT Kharagpur
+            </div>
           </div>
         </div>
       </div>

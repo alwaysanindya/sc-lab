@@ -67,11 +67,18 @@ export default function Dashboard() {
               Select a device to begin screening
             </p>
           </div>
-          <img
-            src="./images/logos/crtdh_logo.png"
-            alt="CRTDH"
-            style={{ width: 40, height: 40, objectFit: 'contain', borderRadius: 10 }}
-          />
+          <div style={{display: 'flex', alignItems: 'center', gap: 8}}>
+            <img
+              src="./images/logos/iitkgp_logo.png"
+              alt="IIT Kharagpur"
+              style={{ width: 36, height: 36, objectFit: 'contain' }}
+            />
+            <img
+              src="./images/logos/crtdh_logo.png"
+              alt="CRTDH"
+              style={{ width: 40, height: 40, objectFit: 'contain' }}
+            />
+          </div>
         </div>
       </header>
 

@@ -185,7 +185,7 @@ export default function Analysis() {
             </div>
             <div style={{display:'flex',justifyContent:'space-between'}}>
               <span style={{color:'var(--text-secondary)'}}>Timestamp:</span>
-              <span style={{fontWeight:600}}>{results ? formatDate(new Date(results.timestamp)) : '—'}</span>
+              <span style={{fontWeight:600}}>{results ? formatDate(new Date(results.timestamp)) : '–'}</span>
             </div>
             <div style={{display:'flex',justifyContent:'space-between'}}>
               <span style={{color:'var(--text-secondary)'}}>Method:</span>
