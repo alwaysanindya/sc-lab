@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#0d7377" />
+    <meta name="description" content="SC Lab - Point-of-Care Screening Platform by CRTDH, IIT Kharagpur" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="SC Lab" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="SC Lab" />
+    <meta name="msapplication-TileColor" content="#0d7377" />
+
+    <!-- Icons -->
+    <link rel="icon" type="image/png" href="./favicon.png" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <link rel="manifest" href="./manifest.json" />
+
+    <title>SC Lab - Point-of-Care Screening</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script>
+      // Register Service Worker
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./sw.js')
+            .then((reg) => console.log('SW registered:', reg.scope))
+            .catch((err) => console.log('SW registration failed:', err))
+        })
+      }
+
+      // Capture beforeinstallprompt for custom install button
+      let deferredPrompt = null
+      window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault()
+        deferredPrompt = e
+        window.deferredPrompt = deferredPrompt
+        // Dispatch custom event so React components can react
+        window.dispatchEvent(new Event('pwaInstallReady'))
+      })
+
+      window.addEventListener('appinstalled', () => {
+        deferredPrompt = null
+        window.deferredPrompt = null
+        window.dispatchEvent(new Event('pwaInstalled'))
+      })
+    </script>
+  </body>
+</html>
