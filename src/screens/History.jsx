@@ -29,7 +29,6 @@ export default function History() {
       <header style={{ padding: '20px', borderBottom: '1px solid var(--border-color)' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <div>
-            <button className="btn-back" onClick={() => navigate('/dashboard')} style={{ marginBottom: 8 }}>←</button>
             <h1 style={{ margin: 0, fontSize: '1.4rem', fontWeight: 600 }}>Screening History</h1>
             <p style={{ margin: '4px 0 0', fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
               {history.length} {history.length === 1 ? 'record' : 'records'}

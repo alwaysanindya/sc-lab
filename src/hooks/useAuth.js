@@ -53,6 +53,7 @@ export const useAuth = () => {
     setUser(null)
     setError(null)
     localStorage.removeItem('sclab_auth')
+    localStorage.removeItem('sclab_onboarded')
   }, [])
 
   const clearError = useCallback(() => {

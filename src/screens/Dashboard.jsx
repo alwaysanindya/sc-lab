@@ -47,13 +47,8 @@ const deviceIcons = {
 
 export default function Dashboard() {
   const navigate = useNavigate()
-  const { user, logout } = useAuth()
+  const { user } = useAuth()
   const devices = getAllDevices()
-
-  const handleLogout = () => {
-    logout()
-    navigate('/login')
-  }
 
   return (
     <div className="dashboard">
@@ -72,38 +67,11 @@ export default function Dashboard() {
               Select a device to begin screening
             </p>
           </div>
-          <div style={{display: 'flex', gap: 8}}>
-            <button
-              onClick={() => navigate('/history')}
-              style={{
-                width: 40, height: 40, borderRadius: 12,
-                border: '1px solid #e2e8f0', background: '#f7f9fc',
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                cursor: 'pointer', color: '#64748b'
-              }}
-              aria-label="History"
-            >
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                <path d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z" fill="currentColor"/>
-              </svg>
-            </button>
-            <button
-              onClick={handleLogout}
-              style={{
-                width: 40, height: 40, borderRadius: 12,
-                border: '1px solid #e2e8f0', background: '#f7f9fc',
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                cursor: 'pointer', color: '#64748b'
-              }}
-              aria-label="Logout"
-            >
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                <polyline points="16 17 21 12 16 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <line x1="21" y1="12" x2="9" y2="12" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-              </svg>
-            </button>
-          </div>
+          <img
+            src="./images/logos/crtdh_logo.png"
+            alt="CRTDH"
+            style={{ width: 40, height: 40, objectFit: 'contain', borderRadius: 10 }}
+          />
         </div>
       </header>
 
@@ -150,15 +118,6 @@ export default function Dashboard() {
         </div>
       </main>
 
-      {/* Footer */}
-      <footer style={{
-        textAlign: 'center', padding: '24px 20px',
-        borderTop: '1px solid #f1f5f9', marginTop: 'auto'
-      }}>
-        <p style={{fontSize: '0.75rem', color: '#94a3b8', margin: 0}}>
-          SC Lab v1.0 · IIT Kharagpur | CRTDH
-        </p>
-      </footer>
     </div>
   )
 }
