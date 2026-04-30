@@ -170,6 +170,12 @@ body,
   flex-direction: column;
 }
 
+/* Nested app-container inside outer layout should fill parent, not viewport */
+.app-container .app-container {
+  min-height: 0;
+  flex: 1;
+}
+
 /* ============================================================
    KEYFRAME ANIMATIONS
    ============================================================ */
